@@ -1,7 +1,7 @@
 describe('Roles & Access', function () {
   beforeEach(() => {
     cy.visit('http://localhost:4200');
-    cy.get('.app-login-form-email').type('test@test.com');
+    cy.get('.app-login-form-email').type('hernandez.hs@gmail.com');
     cy.get('.app-login-form-password').type('123321');
     cy.wait(100);
     cy.get('.app-login-form-submit').click();

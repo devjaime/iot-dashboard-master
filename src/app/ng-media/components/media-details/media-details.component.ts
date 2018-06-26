@@ -36,7 +36,7 @@ export class MediaDetailsComponent implements OnInit {
   }
 
   public DeleteImage (image: IImage) {
-    if (confirm('Are you sure you want to delete this item?')) {
+    if (confirm('¿Seguro que quieres eliminar este elemento?')) {
       this.storage.DeleteItem(image);
       this._ref.destroy();
     }

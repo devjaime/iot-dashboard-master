@@ -4,7 +4,7 @@
     [ngClass]="image.$meta && image.$meta.selected ? ' active ' : ''">
 </div>
 <div *ngIf="searchMode">
-  <h3>Other Images: {{GetImages().length}}</h3>
+  <h3>Otra Imagen: {{GetImages().length}}</h3>
 </div>
 <div class="images-container">
   <img class="preview-image " [src]=" image.src " *ngFor="let image of GetImages()" (click)="ImageSelect(image)" 

@@ -40,8 +40,8 @@ export class LampCardComponent implements OnInit, AfterViewInit {
 
   drawChart() {
     this.data = {
-      title: 'Bedroom Tempreture',
-      subTitle: 'Show Today Live Statistics',
+      title: 'Temperatura del dormitorio',
+      subTitle: 'Mostrar las estadísticas actuales en vivo',
       for: 'Tempreture',
       unit: '°C',
       chartColor: 'orange',
@@ -150,8 +150,8 @@ export class LampCardComponent implements OnInit, AfterViewInit {
     });
 
     this.data = {
-      title: 'Bedroom Tempreture',
-      subTitle: 'Show Today Live Statistics',
+      title: 'Temperatura del dormitorio',
+      subTitle: 'Mostrar las estadísticas actuales en vivo',
       for: 'Tempreture',
       unit: '°C',
       chartColor: 'orange',

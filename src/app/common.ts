@@ -4,7 +4,7 @@ export function GetNetworkError (): IResponse<any> {
   return {
     error: {
       code: 0,
-      message: 'It seems you are not connected to internet. Please check your connection and try again'
+      message: 'Parece que no estás conectado a internet. Por favor, compruebe la conexión y vuelva a intentarlo'
     }
   };
 }
@@ -23,22 +23,22 @@ export const IotImages = [
   {
     id: '1',
     src: IotSvgService.bathroom,
-    name: 'Bathroom',
+    name: 'Baño',
   },
   {
     id: '2',
     src: IotSvgService.kitchen,
-    name: 'Kitchen'
+    name: 'Cocina'
   },
   {
     id: '3',
     src: IotSvgService.masterBedroom,
-    name: 'Master bedroom'
+    name: 'Habitación Carolina y Jaime'
   },
   {
     id: '4',
     src: IotSvgService.pathtub,
-    name: 'Pathtub'
+    name: 'Tina de Baño'
   }
 ];
 

@@ -8,7 +8,7 @@ export const navigation = [
   },
   {
     icon: 'icon-devices_other',
-    title: 'Devices',
+    title: 'Dispositivos',
     permissions: ['DEVICES::VIEW'],
     class: 'device',
     auth: true,
@@ -16,7 +16,7 @@ export const navigation = [
       {
         link: '/device/create',
         icon: '',
-        title: 'Create a device',
+        title: 'Crear un Dispositivo',
         permissions: ['DEVICES::VIEW'],
         auth: true,
         class: 'device-create'
@@ -24,7 +24,7 @@ export const navigation = [
       {
         link: '/devices',
         icon: '',
-        title: 'Devices List',
+        title: 'Lista de dispositivos',
         permissions: ['DEVICES::VIEW'],
         auth: true,
         class: 'device-list'
@@ -33,13 +33,13 @@ export const navigation = [
   },
   {
     icon: 'icon-location_searching',
-    title: 'Locations',
+    title: 'Localización',
     class: 'location',
     children: [
       {
         link: '/location/new',
         icon: '',
-        title: 'Create a location',
+        title: 'Crear una localización',
         permissions: ['LOCATIONS::VIEW'],
         auth: true,
         class: 'location-create'
@@ -47,7 +47,7 @@ export const navigation = [
       {
         link: '/locations',
         icon: '',
-        title: 'View Locations',
+        title: 'Ver ubicaciones',
         permissions: ['LOCATIONS::VIEW'],
         auth: true,
         class: 'location-list'
@@ -56,13 +56,13 @@ export const navigation = [
   },
   {
     icon: 'icon-visibility',
-    title: 'Monitoring',
+    title: 'Supervisión',
     class: 'monitoring',
     children: [
       {
         link: '/monitoring/manage-contacts',
         icon: '',
-        title: 'Manage contacts',
+        title: 'Gestionar contactos',
         permissions: ['LOCATIONS::VIEW'],
         auth: true,
         class: 'manage-contacts'
@@ -71,13 +71,13 @@ export const navigation = [
   },
   {
     icon: 'icon-verified_user',
-    title: 'Users & Access',
+    title: 'Usuarios y acceso',
     class: 'users-access',
     children: [
       {
         link: '/roles',
         icon: '',
-        title: 'Roles list',
+        title: 'Lista de roles',
         permissions: ['LOCATIONS::VIEW'],
         auth: true,
         class: 'roles-list'
@@ -87,13 +87,13 @@ export const navigation = [
   ! environment.production ? {
     link: '/gallery',
     icon: 'icon-attach_file',
-    title: 'Gallery',
+    title: 'Galería',
     permissions: ['USERS::VIEW'],
     auth: true,
     class: 'gallery'
   } : null,
   {
-    title: 'Integration',
+    title: 'Integración',
     icon: 'icon-link',
     children: [
       {
@@ -106,11 +106,11 @@ export const navigation = [
       {
         // link: '/docs',
         icon: 'icon-help',
-        title: 'documents',
+        title: 'Documentos',
         class: 'docs',
         children: [
           {
-            title: 'Introduction',
+            title: 'Introducción',
             class: 'docs-introduction',
             link: '/docs'
           },
@@ -120,7 +120,7 @@ export const navigation = [
             link: '/docs/restful-api'
           },
           {
-            title: 'Sending information',
+            title: 'Enviando Información',
             class: 'docs-sending-information',
             link: '/docs/sending-information-over-https'
           },
@@ -136,7 +136,7 @@ export const navigation = [
     children: [
       {
         link: '/experimental',
-        title: 'Introduction',
+        title: 'Introducción',
         class: 'introduction',
         permissions: ['LOCATIONS::VIEW'],
         auth: true,
@@ -144,7 +144,7 @@ export const navigation = [
       {
         link: '/gps',
         icon: '',
-        title: 'GPS Location',
+        title: 'Localización GPS',
         permissions: ['LOCATIONS::VIEW'],
         auth: true,
         class: 'gps-location'

@@ -1,7 +1,7 @@
 describe('Profile test', function () {
   beforeEach(() => {
     cy.visit('http://localhost:4200');
-    cy.get('.app-login-form-email').type('test@test.com');
+    cy.get('.app-login-form-email').type('hernandez.hs@gmail.com');
     cy.get('.app-login-form-password').type('123321');
 
     cy.wait(100);
@@ -12,7 +12,7 @@ describe('Profile test', function () {
     // cy.get('.ngx-menu-link-logout').click();
   });
   
-  it('Must update the user profile details, such as name, lastname and phone', function () {
+  it('Debe actualizar los detalles del perfil del usuario, como nombre, apellido y teléfono', function () {
     cy.get('.app-profile-view').click();
     cy.wait(100);
 

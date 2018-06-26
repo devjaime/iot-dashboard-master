@@ -74,8 +74,8 @@ export class MediaToolbarComponent implements OnInit {
   }
 
   private findDates (items: IImage[]): Array<{key: string, value: string}> {
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December'
+    const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+      'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
     ];
     const dates = [];
     for (const item of items) {
