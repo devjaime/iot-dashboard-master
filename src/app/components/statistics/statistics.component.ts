@@ -32,19 +32,19 @@ export class StatisticsComponent implements OnInit, OnDestroy {
     ).subscribe((sink) => {
       this.statistics = [];
       this.statistics.push({
-        title: 'Devices',
+        title: 'Dispositivos',
         value: sink[1].length
       });
       this.statistics.push({
-        title: 'Locations',
+        title: 'Localizaciones',
         value: sink[0].length
       });
       this.statistics.push({
-        title: 'Temperatures',
+        title: 'Sensor de Temperaturas',
         value: sink[1].filter(x => +x.type === CloudDeviceType.TemperatureSensor).length
       });
       this.statistics.push({
-        title: 'Lights',
+        title: 'Sensor de Luces',
         value: 0
       });
     });

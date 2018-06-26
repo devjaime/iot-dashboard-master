@@ -56,7 +56,7 @@ export class DevicesComponent implements  OnInit, OnDestroy {
   }
 
   public DeleteDevice (device: CloudDevice) {
-    if (confirm( this.translate.get('Are you sure to delete this device?')['value'])) {
+    if (confirm( this.translate.get('¿Estás seguro de eliminar este dispositivo?')['value'])) {
       this.requests.deleteDevice(device.id);
       this.notification.InvokeDeviceDelete(device);
       this.router.navigateByUrl('/devices');

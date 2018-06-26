@@ -5,7 +5,7 @@
   <div style="float: right;">
     <ng-content></ng-content>
   </div>
-  <input type="text" *ngIf="searchbar" (keyup)="keyup($event.target.value)" class="search-box" placeholder="Search for locations...">
+  <input type="text" *ngIf="searchbar" (keyup)="keyup($event.target.value)" class="search-box" placeholder="Buscar ubicaciones...">
 
   <div  *ngIf="loading" class="spinner">
     <div class="rect1"></div>

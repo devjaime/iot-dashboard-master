@@ -22,7 +22,7 @@ export class SettingsComponent implements OnInit {
     if (IsSuccessEntity(response)) {
       this.token = response.data.items[0].hash;
     } else {
-      this.token = 'Cannot get the token from server. Please try again in few minutes';
+      this.token = 'No se puede obtener el token del servidor. Por favor, inténtelo de nuevo en unos minutos';
     }
   }
 

@@ -31,16 +31,16 @@ export class QuickChartComponent implements OnInit {
       xAxis: {
         min: 1, max: 6,
         categories: [
-          'MON',
-          'TUE',
-          'WED',
-          'THU',
-          'FRI',
-          'SAT',
-          'SUN',
-          'MON',
-          'TUE',
-          'WED'
+          'LUN',
+          'MAR',
+          'MIE',
+          'JUE',
+          'VIE',
+          'SAB',
+          'DOM',
+          'LUN',
+          'MAR',
+          'MIE'
         ],
         labels: {
           style: {
@@ -86,7 +86,7 @@ export class QuickChartComponent implements OnInit {
       },
       series: [{
         animation: false,
-        name: 'Temperature',
+        name: 'Temperatura',
         data: [
           11, 15, 10, 16, 10, 15, 11, 14, 9, 14
         ],

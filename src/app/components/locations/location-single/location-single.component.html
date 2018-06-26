@@ -3,8 +3,8 @@
 
 <app-error-message *ngIf="response && response.error">{{response.error.message}}</app-error-message>
 
-<app-page-container [maintitle]="( form.id ? 'Update' : 'Create' ) + ' location'" 
-  subtitle="Categorize the devices and distribute them into locations and floors.">
+<app-page-container [maintitle]="( form.id ? 'Modificar' : 'Crear' ) + ' Localización'" 
+  subtitle="Categorice los dispositivos y distribúyalos en ubicaciones y pisos.">
   <div class="row">
 
     <div class="form-group col-md-6">
@@ -21,7 +21,7 @@
       <label for="inputName" translate>Nivel:</label>
       <div class="input-group Name">
         <select type="text" [(ngModel)]="form.level" name="level" class="form-control app-location-single-level">
-          <option value="" disabled="disabled" selected="selected" translate>Select the level (floor)</option>
+          <option value="" disabled="disabled" selected="selected" translate>Seleccione el nivel (piso)</option>
           <option *ngFor="let option of levels" [selected]="(option.value ? option.value : option.name) == selected" value="{{option.value ? option.value : option.name}}">{{option.name}}</option>
         </select>
       </div>
@@ -31,15 +31,15 @@
 
   </div>
   
-  <label translate>Choose an image to recognize location easier:</label>
+  <label translate>Elija una imagen para reconocer la ubicación más fácil:</label>
   <app-ng-media 
      (selectionChange)="changeSelection($event);"
     type="single" #locationIcon></app-ng-media>
 
     <br>
-  <button type="submit" (click)="formSubmit()" class="btn btn-primary  app-location-single-create" *ngIf="!form.id" translate>Create Location</button>
-  <button (click)="formSubmit()" class="btn btn-primary app-location-single-update" *ngIf="form.id" translate>Edit Location</button>
-  <button (click)="deleteItem()" class="btn btn-danger" *ngIf="form.id" translate>Delete Location</button>
+  <button type="submit" (click)="formSubmit()" class="btn btn-primary  app-location-single-create" *ngIf="!form.id" translate>Crear ubicación</button>
+  <button (click)="formSubmit()" class="btn btn-primary app-location-single-update" *ngIf="form.id" translate>Editar Localización</button>
+  <button (click)="deleteItem()" class="btn btn-danger" *ngIf="form.id" translate>Eliminaer Localización</button>
 
 </app-page-container>
 </form>

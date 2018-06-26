@@ -21,7 +21,7 @@
           </ul>
       </nav>
       <div class="copyright col-md-6">
-        © 2018 <a href="https://esam.io">ESAM</a>, Inc. <i class="icon-language"></i> Lenguaje  
+        © 2018 <a href="www.lawebdelprogramador.cl">ESAM</a>, Inc. <i class="icon-language"></i> Lenguaje  
         <select class="change-lang" (change)="ChangeLanguage($event.target.value)">
             <option *ngFor="let item of langs" [value]="item.lang" [selected]="translate.currentLang === item.lang">{{item.lang | uppercase}}</option>
         </select>

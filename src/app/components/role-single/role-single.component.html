@@ -2,7 +2,7 @@
   No hay roles. Por favor crea roles y podrás gestionarlos aquí.
 </app-error-message>
 
-<app-page-container [maintitle]="form.id ? 'Edit role \'' + form.title + '\'' : ' Create a new role'" subtitle="Manage roles and access levels">
+<app-page-container [maintitle]="form.id ? 'Editar roles \'' + form.title + '\'' : ' Crear un nuevo rol'" subtitle="Administrar roles y niveles de acceso">
   <form>
     <div class="row">
       <div class="col-md-6 unit">
@@ -16,9 +16,9 @@
       </div>
     </div>
 
-    <button type="submit" (click)="SubmitForm()" translate class="btn btn-primary app-role-single-edit" *ngIf="form.id">Edit role</button>
-    <button (click)="DeleteRole(form)" translate class="btn btn-danger app-role-single-delete" *ngIf="form.id">Delete role</button>
-    <button type="submit" (click)="SubmitForm()" class="btn btn-primary app-role-single-create" *ngIf="!form.id" translate>Create role</button>
-    <a class="btn btn-warning app-role-single-cancel" routerLink="/roles" translate>cancel</a>
+    <button type="submit" (click)="SubmitForm()" translate class="btn btn-primary app-role-single-edit" *ngIf="form.id">Editar roles</button>
+    <button (click)="DeleteRole(form)" translate class="btn btn-danger app-role-single-delete" *ngIf="form.id">Eliminar roles</button>
+    <button type="submit" (click)="SubmitForm()" class="btn btn-primary app-role-single-create" *ngIf="!form.id" translate>Crear roles</button>
+    <a class="btn btn-warning app-role-single-cancel" routerLink="/roles" translate>Cancelar</a>
   </form>
 </app-page-container>

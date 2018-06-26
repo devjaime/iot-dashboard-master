@@ -1,4 +1,4 @@
-<app-page-container maintitle="Locations" subtitle="Manage locations in your account">
+<app-page-container maintitle="localización" subtitle="Administrar ubicaciones en su cuenta">
   <a class="btn btn-primary add-button" routerLink="../location/new" action-button translate>Agregar nueva ubicación</a>
   <div ngx-sidebar-off class="table-responsive iot-table">
     <table class="table app-devices-table">
@@ -16,8 +16,8 @@
           <td>{{location.name | translate}}</td>
           <td>{{location.level}}</td>
           <td>
-            <a [routerLink]="'/locations/edit/' + location.id "><i [Tooltip]="'Edit' | translate" class="icon-mode_edit action-btn"></i></a>
-            <a (click)="DeleteLocation(location.id)"><i [Tooltip]="'Delete' | translate" class="icon-delete action-btn"></i></a>
+            <a [routerLink]="'/locations/edit/' + location.id "><i [Tooltip]="'Editar' | translate" class="icon-mode_edit action-btn"></i></a>
+            <a (click)="DeleteLocation(location.id)"><i [Tooltip]="'Eliminar' | translate" class="icon-delete action-btn"></i></a>
           </td>
         </tr>
       </tbody>
