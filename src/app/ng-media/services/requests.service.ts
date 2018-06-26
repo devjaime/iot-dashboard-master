@@ -20,7 +20,7 @@ export class RequestsService {
   }
 
   public DeleteItem(id: string) {
-    console.log('Requested to delete: ', id);
+    console.log('Solicitado borrar: ', id);
     this.http.delete('http://localhost:1337/ngmedia/delete/' + id).subscribe(
       (response) => {
         console.log(response);
@@ -31,7 +31,7 @@ export class RequestsService {
     );
   }
   public UpdateImage(image: IImage) {
-    console.log('Requested to update: ', image);
+    console.log('Solicitado actualizar: ', image);
   }
 
 }

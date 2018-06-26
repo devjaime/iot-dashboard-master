@@ -39,10 +39,10 @@ export class ContactDetailsComponent implements OnInit {
   }
   public GetPlaceHolder (type: any) {
     if (type === 'email') {
-      return 'Please type a valid email';
+      return 'Por favor ingrese un correo electrónico válido';
     }
     if ( type === 'call' || type === 'sms') {
-      return 'Please type a internationally reachable phone number';
+      return 'Ingrese un número de teléfono internacionalmente accesible';
     }
   }
   public AddAnother () {

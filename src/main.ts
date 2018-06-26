@@ -13,8 +13,8 @@ if (environment.hmr) {
   if (module[ 'hot' ]) {
     hmrBootstrap(module, bootstrap);
   } else {
-    console.error('HMR is not enabled for webpack-dev-server!');
-    console.error('Are you using the --hmr flag for ng serve?');
+    console.error('HMR no está habilitado para webpack-dev-server!');
+    console.error('¿Estás usando la terminal --hmr para ng serve?');
   }
 } else {
   bootstrap();

@@ -41,8 +41,8 @@ export class DailyStatisticsComponent implements OnInit, AfterViewInit {
 
   drawChart() {
     this.data = {
-      title: 'Bedroom Temperature',
-      subTitle: 'Show Today Live Statistics',
+      title: 'Temperatura del dormitorio',
+      subTitle: 'Mostrar las estadísticas actuales en vivo',
       for: 'Temperature',
       unit: '°C',
       chartColor: 'orange',
@@ -161,8 +161,8 @@ export class DailyStatisticsComponent implements OnInit, AfterViewInit {
     });
 
     this.data = {
-      title: 'Bedroom Tempreture',
-      subTitle: 'Show Today Live Statistics',
+      title: 'Temperatura del dormitorio',
+      subTitle: 'Mostrar las estadísticas actuales en vivo',
       for: 'Tempreture',
       unit: '°C',
       chartColor: 'orange',

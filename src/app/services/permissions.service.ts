@@ -11,22 +11,22 @@ export class PermissionsService {
       {
         group: 'USERS',
         key: 'USERS::CREATE',
-        title: 'Create user'
+        title: 'Crear usuario'
       },
       {
         group: 'USERS',
         key: 'USERS::UPDATE',
-        title: 'Update user'
+        title: 'Actualizar usuario'
       },
       {
         group: 'USERS',
         key: 'USERS::DELETE',
-        title: 'Delete user'
+        title: 'Borrar usuario'
       },
       {
         group: 'USERS',
         key: 'USERS::VIEW',
-        title: 'View users'
+        title: 'Ver usuarios'
       }
     ];
   }
@@ -34,12 +34,12 @@ export class PermissionsService {
   DevicesPermissions (): Array<IPermission> {
     return [
       {
-        title: 'Update device infomration',
+        title: 'Actualizar la información del dispositivo',
         group: 'DEVICES',
         key: 'DEVICES::UPDATE_INFORMATION'
       },
       {
-        title: 'Update devices',
+        title: 'Actualizar dispositivos',
         group: 'DEVICES',
         key: 'DEVICES::VIEW'
       }
@@ -49,7 +49,7 @@ export class PermissionsService {
   LocationsPermissions (): Array<IPermission> {
     return [
       {
-        title: 'View Locations',
+        title: 'Ver ubicaciones',
         group: 'LOCATIONS',
         key: 'LOCATIONS::VIEW'
       }
@@ -59,7 +59,7 @@ export class PermissionsService {
   ActivitiesPermissions (): Array<IPermission> {
     return [
       {
-        title: 'View Activities',
+        title: 'Ver actividades',
         group: 'ACTIVITIES',
         key: 'ACTIVITIES::VIEW'
       }
@@ -69,7 +69,7 @@ export class PermissionsService {
   RolesPermissions (): Array<IPermission> {
     return [
       {
-        title: 'View Roles',
+        title: 'Vista de Roles',
         group: 'ROLES',
         key: 'ROLES::VIEW'
       }

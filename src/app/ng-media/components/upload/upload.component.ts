@@ -32,7 +32,7 @@ export class UploadComponent {
   }
 
   public UploadToCloud (files) {
-    console.warn('Now uploading to cloud: ', files);
+    console.warn('Ahora cargando a la nube: ', files);
   }
   uploader() {
     const files = this.fileuploader.nativeElement.files;

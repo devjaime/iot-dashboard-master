@@ -288,20 +288,20 @@ export class MockService {
       if (!req.body.email) {
         errors.push({
           location: 'email',
-          message: 'Please provide "test@test.com" as email'
+          message: 'Proporcione "hernandez.hs@gmail.com" como correo electrónico'
         });
       }
       if (!req.body.password) {
         errors.push({
           location: 'password',
-          message: 'Please provide "123321" as password'
+          message: 'Proporcione "123321" como contraseña'
         });
       }
       return {
         apiVersion: 'beta',
         error: {
           code: 401,
-          message: 'There is an issue on sign-in. Please set the email and password as provided.',
+          message: 'Hay un problema al iniciar sesión. Por favor, configure el correo electrónico y la contraseña como se indica.',
           errors: errors
         }
       };
@@ -340,13 +340,13 @@ export class MockService {
       if ( ! user.email ) {
         errors.push({
           location: 'email',
-          message: 'Please provide the email'
+          message: 'Por favor proporciona el correo electrónico'
         });
       }
       if ( ! user.password ) {
         errors.push({
           location: 'password',
-          message: 'Please provide a strong password'
+          message: 'Proporcione una contraseña segura'
         });
       }
       return errors;
@@ -355,7 +355,7 @@ export class MockService {
       return {
         error: {
           code: 1,
-          message: 'Signup cannot be completed due to some errors. Please fix marked fields and try again',
+          message: 'La suscripción no se puede completar debido a algunos errores. Por favor, arregle los campos marcados e intente de nuevo',
           errors: hasUnvalidFields(form)
         }
       };
@@ -449,7 +449,7 @@ export class MockService {
     if (validations.length) {
       return {
         error: {
-          message: 'Device cannot be created. Please currect the fields are highlighted',
+          message: 'El dispositivo no puede ser creado. Por favor corrija que los campos estén resaltados',
           errors: validations,
           code: 34
         }
@@ -471,7 +471,7 @@ export class MockService {
     if (validateLocation(location).length) {
       return {
         error: {
-          message: 'Cannot create a device. Please fix the following issues',
+          message: 'No se puede crear un dispositivo Por favor arregla los siguientes problemas',
           code: 294,
           errors: validateLocation(location)
         }
@@ -561,11 +561,11 @@ export class MockService {
       return {
         error: {
           code: 29,
-          message: 'We cannot process your reset password request',
+          message: 'No podemos procesar su solicitud de restablecimiento de contraseña',
           errors: [
             {
               location: 'username',
-              message: 'Please provide us a username first.'
+              message: 'Por favor, proporcione un nombre de usuario primero.'
             }
           ]
         },
@@ -619,13 +619,13 @@ function DeviceValidator (device: CloudDevice) {
   if ( ! device.name) {
     errors.push({
       location: 'name',
-      message: 'Device must have a name to be identified'
+      message: 'El dispositivo debe tener un nombre para ser identificado'
     });
   }
   if ( ! device.datasource) {
     errors.push({
       location: 'datasource',
-      message: 'You must connect device to a data source'
+      message: 'Debe conectar el dispositivo a una fuente de datos'
     });
   }
   return errors;

@@ -31,7 +31,7 @@ export class ActionsService {
     return devices.filter(device => +device.location === +location.id);
   }
   public DeleteRole (role: IRole) {
-    if (confirm( this.translate.get('Are you sure to delete this role?')['value'])) {
+    if (confirm( this.translate.get('¿Estás seguro de eliminar esta función?')['value'])) {
       this.requests.deleteRole(role.id);
       this.notification.InvokeRoleDelete(role);
       this.router.navigateByUrl('/roles');

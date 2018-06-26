@@ -22,7 +22,7 @@ export class SideBarComponent implements OnInit {
     {
       link: '/devices',
       icon: 'icon-devices_other',
-      title: 'Devices',
+      title: 'Dispositivo',
     },
     {
       icon: 'icon-widgets',
@@ -30,21 +30,21 @@ export class SideBarComponent implements OnInit {
       children: [
         {
           link: '/activities',
-          title: 'Activities',
+          title: 'Actividades',
         },
         {
-          title: 'Form elements',
+          title: 'Elementos de forma',
           children: [
             {
-              title: 'Roles & permissions',
+              title: 'Roles y permisos',
               children: [
                 {
                   link: '#',
-                  title: 'Activities',
+                  title: 'Actividades',
                 },
                 {
                   link: '/formelements',
-                  title: 'Form elements',
+                  title: 'Elementos de forma',
                 },
                 {
                   link: '#',
@@ -66,22 +66,22 @@ export class SideBarComponent implements OnInit {
     {
       link: '#',
       icon: 'icon-attach_file',
-      title: 'File upload',
+      title: 'Subir archivo',
     },
     {
       icon: 'icon-person_outline',
-      title: 'Users',
+      title: 'Usuarios',
       children: [
         {
-          title: 'Roles & permissions',
+          title: 'Roles y permisos',
           children: [
             {
               link: '#',
-              title: 'Activities',
+              title: 'Actividades',
             },
             {
               link: '#',
-              title: 'Form elements',
+              title: 'Elementos de forma',
             },
             {
               link: '#',
@@ -94,17 +94,17 @@ export class SideBarComponent implements OnInit {
     {
       link: '#',
       icon: 'icon-accessibility',
-      title: 'Roles & permissions',
+      title: 'Roles y permisos',
     },
     {
       link: '/locations',
       icon: 'icon-location_searching',
-      title: 'locations',
+      title: 'Localización',
     },
     {
       link: '#',
       icon: 'icon-event_note',
-      title: 'Activities',
+      title: 'Actividades',
     },
     {
       link: '/login',

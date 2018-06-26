@@ -1,6 +1,6 @@
 export const HistoryStatistics = {
-    title: 'Hall Tempreture History',
-    subTitle: 'Show Hall Tempreture for now and others ...',
+    title: 'Historial de temperatura del comedor',
+    subTitle: 'Mostrar la temperatura del Comedor por ahora y otros ...',
     unit: 'Centigrade',
     resultUnit: 'Avg',
     series: generateMockSeries()

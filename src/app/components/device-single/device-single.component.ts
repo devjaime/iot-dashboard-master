@@ -101,7 +101,7 @@ export class DeviceSingleComponent implements OnInit, OnDestroy {
   }
 
   public DeleteDevice () {
-    if (confirm( this.translate.get('Are you sure to delete this device?')['value'])) {
+    if (confirm( this.translate.get('¿Estás seguro de eliminar este dispositivo?')['value'])) {
       this.requests.deleteDevice(this.form.id);
       this.notification.InvokeDeviceDelete(this.form);
       this.router.navigateByUrl('/devices');

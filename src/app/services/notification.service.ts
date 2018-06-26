@@ -24,17 +24,17 @@ export class NotificationService {
   }
   public InvokePasswordReset () {
     const notification: INotification = {
-      message: 'Your password has been reset successfully.',
+      message: 'Su contraseña ha sido restablecida con éxito.',
       status: 'icon-vpn_key',
       date: new Date(),
-      title: 'Password reset',
+      title: 'Restablecimiento de contraseña',
       type: 'success'
     };
     this.toaster.popAsync(notification.type, notification.title, notification.message);
   }
   public InvokeUserSignup () {
     const title = 'Signup successful';
-    const message = 'Welcome to your dashboard. Please read introductions, in Integration>Docs to learn more.';
+    const message = 'Bienvenido a tu tablero. Lea las presentaciones en Integración> Documentos para obtener más información..';
     this.StoreNotification({
       title,
       type: 'success',
@@ -45,7 +45,7 @@ export class NotificationService {
   }
 
   public InvokeDeviceCreate (device: CloudDevice) {
-    const title = 'Device Created Succesfully';
+    const title = 'Dispositivo creado con éxito ';
     this.StoreNotification({
       title,
       type: 'success',
@@ -55,7 +55,7 @@ export class NotificationService {
     });
   }
   public InvokeRoleUpdate (role: IRole) {
-    const title = 'Role Update Succesfully';
+    const title = 'Actualización de roles con éxito';
     this.StoreNotification({
       title,
       type: 'success',
@@ -65,7 +65,7 @@ export class NotificationService {
     });
   }
   public InvokeRoleCreate (role: IRole) {
-    const title = 'Role Created Succesfully';
+    const title = 'Rol creado con éxito';
     this.StoreNotification({
       title,
       type: 'success',
@@ -76,7 +76,7 @@ export class NotificationService {
   }
 
   public InvokeDeviceUpdate (device: CloudDevice) {
-    const title = 'Device Edited!';
+    const title = 'Dispositivo editado!';
     this.StoreNotification({
       title,
       type: 'success',
@@ -87,7 +87,7 @@ export class NotificationService {
   }
   public InvokeRoleDelete (role: IRole) {
     this.StoreNotification({
-      title: 'Your Role Deleted',
+      title: 'Su rol eliminado',
       type: 'error',
       status: 'icon-remove_circle',
       date: new Date(),
@@ -96,7 +96,7 @@ export class NotificationService {
   }
   public InvokeDeviceDelete (device: CloudDevice) {
     this.StoreNotification({
-      title: 'Your Device Deleted',
+      title: 'Su dispositivo fue eliminado',
       type: 'error',
       status: 'icon-remove_circle',
       date: new Date(),
@@ -105,7 +105,7 @@ export class NotificationService {
   }
   public InvokeLocationDelete (location: ILocation) {
     this.StoreNotification({
-      title: 'Your Location Deleted',
+      title: 'Su ubicación fue eliminada',
       type: 'error',
       status: 'icon-remove_circle',
       date: new Date(),
@@ -114,7 +114,7 @@ export class NotificationService {
   }
   public InvokeContactsUpdate() {
     this.StoreNotification({
-      title: 'Contact details has been updated and will be used effectivly',
+      title: 'Los detalles de contacto se han actualizado y se usarán de manera efectiva',
       type: 'success',
       status: 'icon-mode_edit',
       date: new Date()
@@ -122,7 +122,7 @@ export class NotificationService {
   }
   public InvokeLocationUpdate (location: ILocation) {
     this.StoreNotification({
-      title: 'Your Location has been updated',
+      title: 'Tu ubicación ha sido actualizada',
       type: 'success',
       status: 'icon-mode_edit',
       date: new Date(),
@@ -131,7 +131,7 @@ export class NotificationService {
   }
   public InvokeLocationCreate (location: ILocation) {
     this.StoreNotification({
-      title: 'Location Created Succesfully',
+      title: 'Ubicación creada con éxito',
       type: 'success',
       status: 'icon-add_circle',
       date: new Date(),
@@ -140,29 +140,29 @@ export class NotificationService {
   }
   public InvokeProfileUpdate() {
     this.StoreNotification({
-      title: 'Profile updated',
+      title: 'Perfil actualizado',
       type: 'success',
       status: 'icon-account_box',
       date: new Date(),
-      message: 'Your profile changes has been saved. Some of the changes may affect in the next signin.'
+      message: 'Sus cambios de perfil se han guardado. Algunos de los cambios pueden afectar en el siguiente inicio de sesión.'
     });
   }
   public InvokeSocketConnect () {
     this.StoreNotification({
-      title:  'Server',
+      title:  'Servidor',
       type: 'success',
       status: 'icon-dns',
       date: new Date(),
-      message: 'You are now connected'
+      message: 'Ahora estás conectado'
     });
   }
   public InvokeRoomConnect () {
     this.StoreNotification({
-      title:  'Private environment',
+      title:  'Entorno privado',
       type: 'success',
       status: 'icon-cloud_done',
       date: new Date,
-      message: 'You are inside your private environment now'
+      message: 'Estás dentro de tu entorno privado ahora'
     });
   }
 }

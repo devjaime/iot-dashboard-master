@@ -35,7 +35,7 @@ export class LoginFormComponent implements OnInit {
     if (environment.github && this.user.IsFirst) {
       this.user.IsFirst = false;
       this.signinHttp({
-        email: 'test@test.com',
+        email: 'hernandez.hs@gmail.com',
         password: '123321'
       });
     }

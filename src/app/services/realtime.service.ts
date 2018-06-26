@@ -49,7 +49,7 @@ export class RealtimeService {
     io.sails.autoConnect = true;
     io.socket.on('DataSourceChange', (data: DataSource) => {
       if (!IsDataSource(data)) {
-        console.warn('Recieved a data source which is not valid: ', data);
+        console.warn('Recibió una fuente de datos que no es válida: ', data);
         return false;
       }
       this.RecieveDataSourceIncoming(data);
