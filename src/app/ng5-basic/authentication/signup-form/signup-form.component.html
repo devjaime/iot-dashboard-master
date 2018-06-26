@@ -1,0 +1,53 @@
+<app-progress-line *ngIf="isRequesting"></app-progress-line>
+<app-error-message *ngIf="response && response.error">
+  {{response.error.message}}
+</app-error-message>
+<div class="container-login">
+
+  <div class="wrap-login">
+    
+    <form>
+      <div class="login-header">
+        <span>
+          Registrate en IOT Dashboard
+        </span>
+        <p>
+          La mejor manera de administrar y monitorear sus dispositivos IOT.
+        </p>
+      </div>
+
+      <div class="form-group material-input">
+        <input class="app-signup-form-email" autocomplete="off" type="text" material-input name="email" value="" [(ngModel)]="form.email">
+        <span class="focus-input" data-placeholder="Email"></span>
+        <span class="error-message" *ngIf="error(response, 'email')">{{error(response, 'email')}}</span>
+      </div>
+      
+      <div class="form-group material-input">
+        <span class="btn-show-pass" (click)="togglePassword();">
+          <i [ngClass]="{'icon-visibility_off': passwordVisibilty, 'icon-visibility': (!passwordVisibilty)}"></i>
+        </span>
+        <input class="app-signup-form-password" autocomplete="off" [type]="passwordVisibilty ? 'text' : 'password'" material-input name="password" [(ngModel)]="form.password">
+        <span class="focus-input" data-placeholder="Password"></span>
+        <span class="error-message" *ngIf="error(response, 'password')">{{error(response, 'password')}}</span>
+      </div>
+
+      <p class="signup-info">
+          Al hacer clic en "Signup" esta aceptando las
+          <a routerLink="/privacy-policy">Politicas de privacidad</a>.
+      </p>
+
+      <div class="form-group login-button">
+        <button class="btn btn-primary app-signup-form-submit" (click)="signup($event);">
+          Signup
+        </button>
+      </div>
+
+      <div>
+        ¿Tiene usted una cuenta?
+        <a routerLink="/login">
+          Login
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

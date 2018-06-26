@@ -1,0 +1,44 @@
+<app-page-container 
+  subtitle="Set different actions for specific events that might occure to this device"
+  maintitle="Events and actions">
+
+  
+  <ng-container *ngFor="let term of terms; let i = index;">
+
+    <div class="row" style="padding: 5px 15px;">
+      <div class="float-left">
+
+        <select name="" id="" class="form-control" style="width: 60px;">
+          <option value="" selected>Si</option>
+          <option value="">Si no</option>
+        </select>
+      </div>
+      
+      <div class="float-left">
+        <select name="" class="form-control" id="">
+          <option value="">La temperatura va más de</option>
+          <option value="">La temperatura va menos que</option>
+          <option value="">La temperatura está inactiva por</option>
+        </select>
+      </div>
+
+      <div class="float-left">
+        <input type="number" style="width: 90px;" class="form-control" placeholder="Temp">
+      </div>
+
+      <div class="float-left">
+        Entonces
+      </div>
+      <div class="float-left">
+        <select name="" class="form-control" id="">
+          <option value="">Llamar a mi número de telefonor</option>
+          <option value="">Enviar un mensaje de texto</option>
+          <option value="">Enviar un email</option>
+        </select>
+      </div>
+    </div>
+
+  </ng-container>
+  <br>
+  <button style="margin-left: 7.5px;" (click)="AddAnother()" class="btn btn-secondary app-event-action-add" >+ Add another</button>
+</app-page-container>

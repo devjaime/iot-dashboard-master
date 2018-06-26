@@ -1,0 +1,34 @@
+<app-page-container maintitle="Restful API" subtitle="Understanding the Restful API and how to implement it">
+
+  <app-if-not-english>
+    <div class="alert alert-warning">Los documentos solo están disponibles en inglés y en español en este momento</div>
+  </app-if-not-english>
+  <h2>Visión de conjunto</h2>
+  <p>
+    Para mostrar cualquier información en su tablero, debe enviar los cambios de información de su dispositivo a nuestra API. Estas apis, todas requieren un token para distinguir la identidad.</p>
+
+  <p>
+    Para mayor flexibilidad, podemos aceptar un token por dispositivo diferente o un token general que puede describir información para todos los dispositivos, 
+    y en el cuerpo de la solicitud, puede especificar el dispositivo por su id.
+  
+  En general, nuestros conjuntos de aplicaciones se utilizan para recopilar información, pero también puede encontrar algunas aplicaciones que le devuelven información útil sobre su ecosistema.</p>
+
+  <p><b>Es muy importante notar</b>Todas las respuestas de su API del servidor vuelven con una guía de Google,
+  Llamado <i>guía de estilo de google json</i>y puede adivinar el éxito y el fracaso de su solicitud de API según este formato.
+    En términos generales, si nuestros servidores pueden captar su solicitud, devolveremos 200 respuestas de todos modos, incluso si la operación
+    no ha realizado. En este caso, debe buscar el campo de error dentro del objeto de respuesta.</p>
+  
+  <p>Las respuestas que tienen 50x, 40x o más, rara vez aparecen porque nuestro objetivo es manejar todas las situaciones posibles con nuestra API.
+  y debe considerar este tipo de errores temporalmente fuera de servicio o tiempo de inactividad parcial.</p>
+
+  <h2>Tu Token</h2>
+  <strong>Para cualquier solicitud de dispositivos, necesita obtener un token.</strong>
+  Usted puede <a routerLink="/token">Mira tu ficha aquí.</a>
+  <br>
+  <h2>Próximos pasos:</h2>
+  <ul>
+    <li>
+      <a routerLink="/docs/sending-information-over-https">Enviando información de los dispositivos de sensores usando la api REST</a>
+    </li>
+  </ul>
+</app-page-container>

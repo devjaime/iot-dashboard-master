@@ -1,0 +1,58 @@
+<app-error-message *ngIf="devices.length === 0">
+  No hay dispositivos Por favor crea dispositivos y podrás gestionarlos aquí
+</app-error-message>
+
+<app-page-container maintitle="Devices" subtitle="All of your Devices in your environment">
+  <a class="btn btn-primary add-button" routerLink="../device/create" action-button translate>Connect a new device</a>
+  <div ngx-sidebar-off class="table-responsive iot-table">
+    <table class="table app-devices-table">
+      <thead>
+        <tr>
+          <th translate>Nombre del dispositivo</th>
+          <th translate>Fuente de datos</th>
+          <th translate>Tipo</th>
+          <th translate>Localización</th>
+          <th translate>Modelo</th>
+          <th class="action-column" translate>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let source of unconnected" class="unconnected-row" >
+          <td>N/A</td>
+          <td>{{source.dataSourceId}}</td>
+          <td>
+            N/A
+          </td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>
+            <a [routerLink]="'/create-device-from-source/' + source.dataSourceId">
+              <i [Tooltip]="'Create device'" class="icon-add"></i>
+            </a>
+          </td>
+        </tr>
+        <tr *ngFor="let device of devices" class="app-devices-row">
+          <td>{{device.name | translate}}</td>
+          <td>{{device.datasource}}</td>
+          <td>
+            <i *ngIf="+device.type === 0" [Tooltip]="'Tempreture'" class="icon-thermometer-lines"></i>
+            <i *ngIf="+device.type === 1" [Tooltip]="'Light'" class="icon-lightbulb_outline"></i>
+          </td>
+          <td><a [routerLink]="'/locations/edit/' + device.location">
+            {{FindLocationName (device.location) | translate}}</a>
+          </td>
+          <td>{{ ! device.model ? 'N/A' : device.model}}</td>
+          <td>
+            <a [routerLink]="'/device/' + device.id "><i [Tooltip]="'Edit'" class="icon-mode_edit action-btn"></i></a>
+            <a (click)="DeleteDevice(device)"><i [Tooltip]="'Delete'" class="icon-delete action-btn"></i></a>
+            <app-if-experimental>
+              <a [routerLink]="'/device/events-and-actions/' + device.id ">
+                <i [Tooltip]="'Manage'" class="icon-av_timer action-btn"></i>
+              </a>
+            </app-if-experimental>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</app-page-container>

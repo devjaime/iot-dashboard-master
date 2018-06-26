@@ -1,0 +1,69 @@
+<app-progress-line *ngIf="isRequesting"></app-progress-line>
+<app-error-message *ngIf="response && response.error">
+  {{response.error.message}}
+</app-error-message>
+
+<app-page-container maintitle="My profile" subtitle="Manage and edit your personal and other information">
+  <form>
+  <div class="row">
+    <div class="col-md-6 unit">
+      <label class="label" translate>Nombre:</label>
+      <div class="input">
+        <input class="form-control app-profile-firstname" 
+          [(ngModel)]="form.firstname"
+          name="firstname"
+          type="text" placeholder="Your first name">
+      </div>
+    </div>
+    <div class="col-md-6 unit">
+      <label class="label" translate>Apellido:</label>
+      <div class="input">
+        <input class="form-control app-profile-lastname" 
+          [(ngModel)]="form.lastname"
+          name="lastname"
+          type="text" placeholder="Your first lastname">
+      </div>
+    </div>
+    <div class="col-md-6 unit">
+      <label class="label" translate>Telefono:</label>
+      <div class="input">
+        <input class="form-control app-profile-phone" 
+          [(ngModel)]="form.phone"
+          name="phone"
+          type="text" placeholder="Your first phone">
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" (click)="SubmitForm()" 
+    class="btn btn-primary app-profile-update">Modificar mi perfil</button>
+  </form>
+</app-page-container>
+
+<app-page-container maintitle="Regional options" subtitle="Set your language, location and timezone">
+  <form>
+  <div class="row">
+    <div class="col-md-6 unit">
+      <label class="label" translate>Lenguaje:</label>
+      <div class="input">
+        <select class="form-control app-profile-language" 
+          [(ngModel)]="form.preferences.language"
+          name="preferences_language"
+          (change)="ChangeLanguage()"
+          type="text">
+          <option *ngFor="let item of globalization.GetLanguages()" [value]="item.lang" [selected]="translate.currentLang === item.lang">{{item.label}}</option>
+        </select>
+        <span class="warning">
+          {{ 'Por el momento, para algunos idiomas puede que no esté completamente cubierto y todavía vea palabras en inglés.' | translate }}
+          {{ 'Además, no almacenamos sus preferencias en su cuenta ya que es una función experimental.' | translate }}
+        </span>
+        <app-if-experimental>
+          <span class="warning">
+            Intente contribuir con este repositorio si está interesado en agregar su propio idioma con soporte oficial. Por el momento solo apoyamos el idioma Español.
+          </span>
+        </app-if-experimental>
+      </div>
+    </div>
+  </div>
+  </form>
+</app-page-container>

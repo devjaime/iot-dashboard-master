@@ -1,0 +1,26 @@
+<div *ngIf="active" class="uploader-container ngm-text-center"  
+  (dragenter)="eventHandler($event)" 
+  (dragover)="eventHandler($event)" 
+  (dragleave)="eventHandler($event)" 
+  (drop)="setToFileUploader($event)">
+  <div *ngIf="windowUploader" class="uploader-window">
+    <h1>
+      Suelta los archivos para subir
+    </h1>
+  </div>
+  <div class="uploader-zone">
+    <p>
+      Suelta los archivos para subir el cuadro
+    </p>
+    <span>o</span>
+    <div class="ngm-upload-button">
+      <label for="file-upload" class="ngm-btn ngm-btn-lg">
+        Selecciona los archivos
+      </label>
+      <input #inputFile id="file-upload" type="file" multiple (change)="uploader()"/>
+    </div>
+    <span>
+      Tamaño maximo de archivo a subir es: 2 MB.
+    </span>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+<div class="ngm-form-container" (click)="close($event)">
+  <div class="ngm-form" *ngIf="image">
+    <div class="ngm-form-header">
+      <div class="ngm-form-header-title">
+          <h1>
+              Detalle del archivo adjunto
+          </h1>
+      </div>
+      <div class="ngm-form-header-controller">
+        <button (click)="chnageItem('prev')" class="icon dashicons-arrow-left-alt2"></button>
+        <button (click)="chnageItem('next')" class="icon dashicons-arrow-right-alt2"></button>
+        <button (click)="close($event)" class="icon dashicons-no-alt"></button>
+      </div>
+    </div>
+    <div class="ngm-form-content">
+      <div *ngIf="!image.$meta.editing">
+        <div class="ngm-form-content-img">
+            <img [src]="image.src">
+            
+            <div class="edit-image-button">
+                <button class="ngm-btn ngm-btn-md" (click)="enableEditing(image);">Editar Imagen</button>
+            </div>
+        </div>
+        <div class="ngm-form-content-info">
+          <div class="ngm-form-content-info-detail">
+            <div>
+              <strong>Nombre del archivo : </strong>
+              {{ image.name }}
+            </div>
+            <div>
+              <strong>Tipo de archivo : </strong>
+              {{ image.type }}
+            </div>
+            <div>
+              <strong>Subido en : </strong>
+              {{ image.createdAt | date:'fullDate'}}
+            </div>
+            <div>
+              <strong>Tamaño de archivo : </strong>
+              {{ image.size / 1024 | number: '1.1-1' }} KB
+            </div>
+            <div>
+              <strong>Dimensiones : </strong>
+              {{ image.width }} × {{ image.height }}
+            </div>
+            <div>
+                <strong>Subido por : </strong>
+                {{ image.uploadedBy }}
+              </div>
+          </div>
+          <div class="ngm-form-group-container">
+            <div class="ngm-form-group">
+              <div class="ngm-form-group-title">
+                <span>File name :</span>
+              </div>
+              <div class="ngm-form-group-element">
+                  <input type="text" [(ngModel)]="image.name" class="ngm-input ngm-form-control">
+              </div>
+            </div>
+
+            <div class="ngm-form-group">
+              <div class="ngm-form-group-title">
+                <span>Title :</span>
+              </div>
+              <div class="ngm-form-group-element">
+                  <input type="text" [(ngModel)]="image.title" class="ngm-input ngm-form-control">
+              </div>
+            </div>
+
+            <div class="ngm-form-group">
+              <div class="ngm-form-group-title">
+                <span>Caption :</span>
+              </div>
+              <div class="ngm-form-group-element">
+                  <textarea type="text" [(ngModel)]="image.caption" class="ngm-input ngm-form-control"></textarea>
+              </div>
+            </div>
+
+            <div class="ngm-form-group">
+              <div class="ngm-form-group-title">
+                <span>Alt :</span>
+              </div>
+              <div class="ngm-form-group-element">
+                  <input type="text" [(ngModel)]="image.alt" class="ngm-input ngm-form-control">
+              </div>
+            </div>
+
+            <div class="ngm-form-group">
+              <div class="ngm-form-group-title">
+                <span>Descripción :</span>
+              </div>
+              <div class="ngm-form-group-element">
+                  <textarea type="text" [(ngModel)]="image.description" class="ngm-input ngm-form-control"></textarea>
+              </div>
+            </div>
+            <br>
+            <div class="ngm-form-group">
+              <div class="ngm-form-group-title">
+              </div>
+              <div class="ngm-form-group-element">
+                  <button class="ngm-btn ngm-btn-md ngm-btn-primary" (click)="UpdateImage(image)">Modificar</button>
+                  <button class="ngm-btn ngm-btn-md ngm-btn-danger" (click)="DeleteImage(image)">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-image-editor [storage]="storage" [image]="image" *ngIf="image.$meta.editing"></app-image-editor>
+    </div>
+  </div>
+</div>
