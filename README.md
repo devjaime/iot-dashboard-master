@@ -4,13 +4,13 @@
 # Angular  IOT Azure Dashboard
 
 Angular Dashboard es un panel de administración para muchos propósitos, enfocado en IoT, hogar inteligente y autonomía.
-Este proyecto, es una aplicación completamente funcional y está alojado en `www.lawebdelprogramador.cl/IOT` como un producto empresarial. Estamos compartiendo muchos componentes y nuestro flujo de trabajo aquí dentro de este repositorio.
+Este proyecto, es una aplicación completamente funcional y está alojado en `www.lawebdelprogramador.cl/IOT` como una demo de azure con angular. Estoy compartiendo muchos componentes y el flujo de trabajo aquí dentro de este repositorio.
 
 Este proyecto se puede usar para Internet de cosas, informes de tablero, administración de usuarios, monitoreo en vivo y otros
 proyectos basados ​​en tablero para angular.
 
 
-Continuamente actualizaremos el flujo de trabajo de la aplicación. Puede usar componentes de este proyecto e inspirarse
+Continuamente actualizare el flujo de trabajo de la aplicación. Puede usar componentes de este proyecto e inspirarse
 un tablero de inteligencia puede estar funcionando.
 O puede bifurcar este proyecto, o crear su propia aplicación, e importar componentes desde este repositorio
 
@@ -20,8 +20,8 @@ y aún así obtener el beneficio de las características menores y principales d
 
 keywords: zure IOT Dashboard,Internet de las cosas Angular, Tiempo real Angular App
 
-# Características empresariales estables
-Enumeramos nuestras características estables que funcionan como nivel empresarial dentro de la aplicación.
+# Características estables
+Enumeramos nuestras características estables que funcionan como nivel demo dentro de la aplicación.
 
 * Registro de usuario
 * Usuario iniciando sesión
@@ -55,22 +55,29 @@ Por favor, siéntase libre de contribuir a este repositorio en caso de que quier
 
 ## Proceso técnico
 
-* El proyecto se basa en Angular y CLI angular. Para desarrollar, utilice `npm start`, que también proporciona HMR, y para el nivel de producción usaremos` npm run build`, que llama directamente a las tareas `ng *`.
-Revise el paquete.json para diferentes entornos de construcción. * Esta aplicación se puede ejecutar sin api o microservicios, todos los puntos finales tienen simulaciones interactivas *. Dado que cada cliente puede necesitar una forma diferente de compilar la aplicación, simplemente ponemos ejemplos de construcción.
-En caso de que esté distribuyendo esta aplicación nuevamente para sus propios fines, cree sus propios entornos y agréguelos al archivo `.angular-cli.json` y actualice el paquete, respectivamente
+* El proyecto se basa en Angular y CLI angular. Para desarrollar, utilice `npm start`, 
+que también proporciona HMR, y para el nivel de producción usaremos` npm run build`, 
+que llama directamente a las tareas `ng *`.
+Revise el paquete.json para diferentes entornos de construcción. * 
+Esta aplicación se puede ejecutar sin api o microservicios, 
+todos los puntos finales tienen simulaciones interactivas *. 
+Dado que cada cliente puede necesitar una forma diferente de compilar la aplicación, simplemente ponemos ejemplos de construcción.
+En caso de que esté distribuyendo esta aplicación nuevamente para sus propios fines, 
+cree sus propios entornos y agréguelos al archivo `.angular-cli.json` y actualice el paquete, respectivamente
 
-* Estamos utilizando la biblioteca Highcharts para nuestros gráficos. Para cualquier solicitud de extracción entrante que contenga otras librerías de gráficos, abra primero un problema y describa por qué no es posible hacerlo utilizando los gráficos HigjCharts.
+* Estoy utilizando la biblioteca Highcharts para los gráficos https://www.highcharts.com/ . Para cualquier solicitud de extracción entrante que contenga otras librerías de gráficos, abra primero un problema y describa por qué no es posible hacerlo utilizando los gráficos HigjCharts.
 * `lodash`, y` ngrx` store se usan mucho para el flujo de datos.
 * Los conceptos Async / Await están en todas partes ya que el proyecto es un panel en tiempo real
 * No estamos apoyando pruebas unitarias. Solo usamos pruebas de integración / e2e usando ciprés, y se ejecutará para cada solicitud de extracción. En caso de un cálculo pesado o una implementación de datos confidenciales que requiera pruebas unitarias, muévala a otra
 paquete, publíquelo en npm y luego instálelo dentro de este repositorio
 
 
-* La demostración del proyecto se almacena en páginas github; https://owsolutions.github.io/angular5-iot-dashboard Por lo tanto, estamos comprometiendo el directorio dist para cada compilación y dado que nuestra carpeta dist no es necesariamente la producción. Sin embargo, necesita construir esta aplicación para usted, ya que nuestra configuración es diferente.
+* La demostración del proyecto se almacena en páginas github; 
+http://www.lawebdelprogramador.cl/IOT Por lo tanto, estpy comprometiendo el directorio dist para cada compilación y dado que nuestra carpeta dist no es necesariamente de producción. Sin embargo, necesita construir esta aplicación para usted, ya que esta configuración es diferente.
 
 
 # Versión móvil (Experimental)
-Esta aplicación también se incluirá en una aplicación Cordova para aplicaciones de Android. Ponemos los archivos apk en versiones de Github, que no están firmadas. Por favor, siéntase libre de firmarlos en su propio almacén de claves.
+Esta aplicación también se incluirá en una aplicación Cordova para aplicaciones de Android. Pongo los archivos apk en versiones de Github, que no están firmadas. Por favor, siéntase libre de firmarlos en su propio almacén de claves.
 
 
 Lea sobre la firma de un archivo apk aquí:
@@ -84,20 +91,11 @@ Por favor, bifurque la aplicación y actualice o CI / CD para compilar con su di
 
 ## Vista previa en vivo
 
-Puede ver la última implementación aquí: [https://owsolutions.github.io/angular5-iot-dashboard](https://owsolutions.github.io/angular5-iot-dashboard)
+Puede ver la última implementación aquí: [http://www.lawebdelprogramador.cl/IOT](http://www.lawebdelprogramador.cl/IOT)
 
 
-Estamos organizando la versión demo en github. Para la versión empresarial, contáctenos.
-
-
-## Guía de contribución
-Estamos muy emocionados de recibir solicitudes de extracción de usted. Hay algunas reglas simples que seguimos en nuestro proyecto:
-
-
-* Por favor, no hay comentarios sobre las funciones a menos que sea realmente necesario. Consulte este artículo por el motivo: https://bradt.ca/blog/useless-code-comments/
-* Abra un problema para su solicitud de extracción e inicie su nombre de rama con este formato: `issue / [number] -this-is-my-branch` para que podamos rastrear el problema hasta que lo cerremos.
-* Asegúrese de que su código pase las pruebas,  y pruebas e2e. Para una nueva funcionalidad, agregue abundantes pruebas.
+Estoy organizando la versión demo en github. Para la versión empresarial, contácteme hernandez.hs@gmail.com.
 
 
 ## Copywrite
-Este proyecto es gratuito para uso educativo, revisión de código y uso no comercial. Para uso empresarial / comercial, debe obtener una licencia y ponerse en contacto con nosotros.
+Este proyecto es gratuito para uso educativo, revisión de código y uso no comercial. Sin embargo agradeceria nombrarme en proyectos empresariales como parte de la idea original
