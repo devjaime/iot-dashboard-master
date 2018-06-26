@@ -1,6 +1,6 @@
 export const DailyStatistics = {
     title: 'Temperatura del dormitorioe',
-    subTitle: 'Mostrar las estadísticas actuales en vivo',
+    subTitle: 'Mostrar estadísticas actuales',
     for: 'Tempreture',
     unit: '°C',
     chartColor: 'orange',

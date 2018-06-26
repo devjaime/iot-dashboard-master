@@ -50,7 +50,7 @@ const devices = [
   },
   {
     id: 4,
-    name: 'Humedad del comedor',
+    name: 'Humedad del baño',
     type: CloudDeviceType.HumiditySensor,
     datasource: 'device-5',
     value: random(10, 60),
@@ -61,7 +61,7 @@ const devices = [
   },
   {
     id: 5,
-    name: 'Sensor de CO2',
+    name: 'Sensor de CO2 Calefón',
     type: CloudDeviceType.CO2Sensor,
     datasource: 'device-6',
     value: random(100, 600),
@@ -72,7 +72,7 @@ const devices = [
   },
   {
     id: 6,
-    name: 'Temperatura del calefont',
+    name: 'Temperatura del Calefón',
     type: CloudDeviceType.TemperatureSensor,
     datasource: 'device-7',
     value: random(10, 30),
@@ -83,7 +83,7 @@ const devices = [
   },
   {
     id: 7,
-    name: 'Temperatura negativa',
+    name: 'Temperatura Minima',
     type: CloudDeviceType.TemperatureSensor,
     datasource: 'device-8',
     value: random(10, 30),
@@ -94,7 +94,7 @@ const devices = [
   },
   {
     id: 8,
-    name: 'Thermal temperature',
+    name: 'Temperatura Maxima',
     type: CloudDeviceType.TemperatureSensor,
     datasource: 'device-9',
     value: random(10, 30),

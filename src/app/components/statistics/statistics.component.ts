@@ -45,7 +45,7 @@ export class StatisticsComponent implements OnInit, OnDestroy {
       });
       this.statistics.push({
         title: 'Sensor de Luces',
-        value: 0
+        value: 12
       });
     });
   }
