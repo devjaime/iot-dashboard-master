@@ -16,7 +16,7 @@ import 'rxjs/add/operator/delay';
 const devices = [
   {
     id: 1,
-    name: 'Hall temperature',
+    name: 'Temperatura del pasillo',
     type: CloudDeviceType.TemperatureSensor,
     datasource: 'device-1',
     value: random(10, 30),
@@ -28,7 +28,7 @@ const devices = [
   },
   {
     id: 2,
-    name: 'Kitchen temperature',
+    name: 'Temperatura de la cocina',
     type: CloudDeviceType.TemperatureSensor,
     datasource: 'device-2',
     value: random(10, 30),
@@ -39,7 +39,7 @@ const devices = [
   },
   {
     id: 3,
-    name: 'Main Lamp',
+    name: 'Lampara principal',
     type: CloudDeviceType.LampBridge,
     datasource: 'device-4',
     value: 1,
@@ -50,7 +50,7 @@ const devices = [
   },
   {
     id: 4,
-    name: 'Lobby humidity',
+    name: 'Humedad del comedor',
     type: CloudDeviceType.HumiditySensor,
     datasource: 'device-5',
     value: random(10, 60),
@@ -61,7 +61,7 @@ const devices = [
   },
   {
     id: 5,
-    name: 'CO2 sensor',
+    name: 'Sensor de CO2',
     type: CloudDeviceType.CO2Sensor,
     datasource: 'device-6',
     value: random(100, 600),
@@ -72,7 +72,7 @@ const devices = [
   },
   {
     id: 6,
-    name: 'Magnet temperature',
+    name: 'Temperatura del calefont',
     type: CloudDeviceType.TemperatureSensor,
     datasource: 'device-7',
     value: random(10, 30),
@@ -83,7 +83,7 @@ const devices = [
   },
   {
     id: 7,
-    name: 'Negative temperature',
+    name: 'Temperatura negativa',
     type: CloudDeviceType.TemperatureSensor,
     datasource: 'device-8',
     value: random(10, 30),
@@ -108,19 +108,19 @@ const validateLocation = (location: ILocation) => {
   const errors: Array<IResponseErrorItem> = [];
   if (!location.name) {
     errors.push({
-      message: 'Please provide a name for location',
+      message: 'Proporcione un nombre para la ubicación',
       location: 'name'
     });
   }
   if (!location.level) {
     errors.push({
-      message: 'Please select a level',
+      message: 'Por favor seleccione un nivel',
       location: 'level'
     });
   }
   if (!location.icon) {
     errors.push({
-      message: 'Please select an icon for location',
+      message: 'Por favor seleccione un icono para la ubicación',
       location: 'icon'
     });
   }
@@ -206,8 +206,8 @@ export class MockService {
   }
 
   public ResetPassword(req: HttpRequest<IResetForm>): IResponse<any> {
-    const message = 'Please reset your password to 123321, and both fields must be identical.' +
-    ' You see this message because your are running an experimental version of app';
+    const message = 'Restablezca su contraseña a 123321, y ambos campos deben ser idénticos.' +
+    'Usted ve este mensaje porque está ejecutando una versión experimental de la aplicación';
     if (req.body.password1 !== '123321' || req.body.password2 !== req.body.password1) {
       return {
         error: {
@@ -216,11 +216,11 @@ export class MockService {
           errors: [
             {
               location: 'password1',
-              message: 'Please type 123321'
+              message: 'Por favor escriba 123321'
             },
             {
               location: 'password2',
-              message: 'Please repeat 123321'
+              message: 'Por favor repita 123321'
             }
           ]
         }
@@ -242,11 +242,11 @@ export class MockService {
   }
   public mockUser () {
     return {
-      email: 'alitorabi@seekasia.com',
-      username: 'alitorabi',
+      email: 'hernandez.hs@gmail.com',
+      username: 'jhernandez',
       avatar: 'user.png',
-      firstname: 'John',
-      lastname: 'Doe ',
+      firstname: 'Jaime',
+      lastname: 'Hernandez ',
       role: {
         permissions: [
           this.permissions.findByKey('DEVICES::VIEW'),
@@ -270,7 +270,7 @@ export class MockService {
     };
   }
   signIn( req: HttpRequest<any> ): IResponse<any> {
-    if ( req.body.email === 'test@test.com' && req.body.password === '123321' ) {
+    if ( req.body.email === 'hernandez.hs@gmail.com' && req.body.password === '123321' ) {
       return {
         'data': {
           'items': [
@@ -417,21 +417,21 @@ export class MockService {
         items: [
           {
             id: 1,
-            name: 'Kitchen',
+            name: 'Cocina',
             'icon': IotSvgService.kitchen,
             level: '2',
             temperatureDevice: 1
           },
           {
             id: 2,
-            name: 'Bathroom',
+            name: 'Baño',
             'icon': IotSvgService.pathtub,
             level: '3',
             temperatureDevice: 2
           },
           {
             id: 3,
-            name: 'Master bedroom',
+            name: 'Habitación Carolina y Jaime',
             'icon': IotSvgService.masterBedroom,
             level: '2',
             temperatureDevice: 1
@@ -529,15 +529,15 @@ export class MockService {
       data: {
         items: [
           {
-            date: new Date('2018-09-10'),
+            date: new Date('2018-06-27'),
             average: 33.5
           },
           {
-            date: new Date('2018-09-09'),
+            date: new Date('2018-06-26'),
             average: 35.2
           },
           {
-            date: new Date('2018-09-08'),
+            date: new Date('2018-06-25'),
             average: 31.5
           }
         ]

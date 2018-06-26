@@ -84,7 +84,7 @@ export default {
   'Consider this token highly secret. Anybody has this token can make changes on your dashboard or control your devices over network.': 'Rozważ ten token bardzo tajny. Każdy ma token, który może wprowadzać zmiany na pulpicie nawigacyjnym lub kontrolować urządzenia przez sieć.',
   'My profile': 'Mój profil',
   'Manage and edit your personal and other information': 'Zarządzaj i edytuj swoje dane osobowe i inne',
-  'Firstname:': 'Imię:',
+  'Firstname:': 'Jaime Hernandez:',
   'Lastname:': 'Nazwisko:',
   'Phone:': 'Telefon:',
   'Regional options': 'Opcje regionalne',
