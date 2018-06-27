@@ -13,7 +13,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 export const ExperimentalLanguages = {
   'pl': {'title': 'Polish (Poland)', 'direction': 'ltr'},
-  'fa': {'title': 'Persian (فارسی ایران)', 'direction': 'rtl'},
+  'fa': {'title': 'Persian ', 'direction': 'rtl'},
 };
 export const StableLanguages = {
   'en': {'title': 'English (United States)', 'direction': 'ltr'},
