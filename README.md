@@ -73,7 +73,7 @@ paquete, publíquelo en npm y luego instálelo dentro de este repositorio
 
 
 * La demostración del proyecto se almacena en páginas github; 
-http://www.lawebdelprogramador.cl/IOT Por lo tanto, estpy comprometiendo el directorio dist para cada compilación y dado que nuestra carpeta dist no es necesariamente de producción. Sin embargo, necesita construir esta aplicación para usted, ya que esta configuración es diferente.
+http://www.lawebdelprogramador.cl/IOT Por lo tanto, estoy comprometiendo el directorio dist para cada compilación y dado que nuestra carpeta dist no es necesariamente de producción. Sin embargo, necesita construir esta aplicación para usted, ya que esta configuración es diferente.
 
 
 # Versión móvil (Experimental)
